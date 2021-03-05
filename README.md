@@ -12,6 +12,8 @@ Check List
 
 [X] Create Inputs: First Name, Last Name, ID, Title, Annual Salary
 
-[ ] Create a submit button to collect the form information and push object into an array called employeeInfo
+[X] Create a submit button to collect the form information and push object into an array called employeeInfo
+
+[ ] Create a function to calculate total cost 
 
 [ ] Create function to append information to DOM and clear inputs
