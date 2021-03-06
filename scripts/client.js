@@ -9,22 +9,20 @@ let employeeInfo = [];
 
 function getInfo () {
     //console.log( 'clicked getInfoButton' );//TEST dont need anymore
-    const fName = $( '#fNameIn' ).val();
-    const lName = $( '#lNameIn' ).val();
-    const id = $( '#idIn').val();
-    const title = $( '#titleIn').val();
-    const salary = $( '#salaryIn').val();
     let employee = {
-        firstName: fName,
-        lastName: lName,
-        id: id,
-        title: title,
-        salary: Number(salary)
+        firstName: $( '#fNameIn' ).val(),
+        lastName: $( '#lNameIn' ).val(),
+        id: $( '#idIn' ).val(),
+        title: $( '#titleIn' ).val(),
+        salary: Number($( '#salaryIn' ).val() )
     }//end of employeeObject
     employeeInfo.push( employee );
-    console.log( employeeInfo );
+    console.log( employeeInfo );//Test
+    console.log(totalCost( employeeInfo ));//Test
+    displayInfo( employeeInfo );
+    totalCost( employeeInfo );
+    //empty text input
     clear();
-    console.log(totalCost( employeeInfo ));
 }//end getInfo
 
 function clear() {
@@ -41,5 +39,20 @@ function totalCost( array ) {
         cost += array[i].salary;
     }//end of for loop
     let monthlyCost = cost/12;
-    return monthlyCost; 
-}
+    let el = $ ( '#costOut' );
+    //empty tag
+    el.empty();
+    //append
+    el.append( `<h4> ${monthlyCost} </h4>` ) 
+}//end of totalCost
+
+function displayInfo( info ){
+    console.log( 'in displayInfo' );//Test
+    //target ul by id
+    let el = $( '#infoOut' );
+    //empty ul
+    el.empty();
+    //loop through array
+    for (let i=0; i<info.length; i++)
+        el.append( `<li> ${info[i].firstName} ${info[i].lastName} ${info[i].id} ${info[i].title} ${info[i].salary} </li>` );
+}// end of displayInfo

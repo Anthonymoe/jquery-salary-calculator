@@ -14,6 +14,10 @@ Check List
 
 [X] Create a submit button to collect the form information and push object into an array called employeeInfo
 
-[ ] Create a function to calculate total cost 
+[X] Create a function to calculate total cost 
 
-[ ] Create function to append information to DOM and clear inputs
+[X] Create function to append information to DOM and clear inputs
+
+[X] Calculate total monthly cost and append to DOM 
+
+[ ] Create function if total monthly cost exceeds 20k

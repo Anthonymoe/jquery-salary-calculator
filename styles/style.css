@@ -1,3 +1,10 @@
 #getInfoButton {
-    margin: 10px;
+    margin-left: 723px;
+    margin-top: 10px;
+}
+
+#costDisplay {
+    margin-left: 550px;
+    margin-top: 10px;
+}
 }
