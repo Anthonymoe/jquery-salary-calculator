@@ -19,7 +19,7 @@ function getInfo () {
         lastName: lName,
         id: id,
         title: title,
-        salary: salary
+        salary: Number(salary)
     }//end of employeeObject
     employeeInfo.push( employee );
     console.log( employeeInfo );
