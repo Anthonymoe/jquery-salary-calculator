@@ -3,7 +3,7 @@ $( document ).ready( onReady );
 function onReady(){
     console.log( 'JQ' );
     $( '#getInfoButton' ).on( 'click', getInfo ); 
-    $( '#infoOut' ).on( 'click', 'deleteButton', deleteRow );
+    $( '#infoOut' ).on( 'click', '#deleteButton', deleteRow );
 }//end of onReady
 
 let employeeInfo = [];
@@ -62,5 +62,5 @@ function displayInfo( info ){
 }// end of displayInfo
 
 function deleteRow(){
-    $(this).fadeout();
+    $(this).parent().parent().remove();
 }
