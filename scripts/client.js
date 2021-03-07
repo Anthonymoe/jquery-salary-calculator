@@ -3,6 +3,7 @@ $( document ).ready( onReady );
 function onReady(){
     console.log( 'JQ' );
     $( '#getInfoButton' ).on( 'click', getInfo ); 
+    $( '#infoOut' ).on( 'click', 'deleteButton', deleteRow );
 }//end of onReady
 
 let employeeInfo = [];
@@ -19,8 +20,8 @@ function getInfo () {
     employeeInfo.push( employee );
     console.log( employeeInfo );//Test
     console.log(totalCost( employeeInfo ));//Test
-    displayInfo( employeeInfo );
     totalCost( employeeInfo );
+    displayInfo( employeeInfo );
     //empty text input
     clear();
 }//end getInfo
@@ -43,7 +44,10 @@ function totalCost( array ) {
     //empty tag
     el.empty();
     //append
-    el.append( `<h4> ${monthlyCost} </h4>` ) 
+    if (monthlyCost > 20000) {
+        $('#costOut').css("background-color", "red");
+    }//end greater than 20k    
+    el.append( `<p> Total Monthly: ${monthlyCost} <p>` ) 
 }//end of totalCost
 
 function displayInfo( info ){
@@ -54,5 +58,9 @@ function displayInfo( info ){
     el.empty();
     //loop through array
     for (let i=0; i<info.length; i++)
-        el.append( `<li> ${info[i].firstName} ${info[i].lastName} ${info[i].id} ${info[i].title} ${info[i].salary} </li>` );
+        el.append( `<tr> <td>${info[i].firstName}</td> <td>${info[i].lastName}</td> <td>${info[i].id}</td> <td>${info[i].title}</td> <td>${info[i].salary}</td> <td><button id="deleteButton" >Delete</button></td> </tr>` );
 }// end of displayInfo
+
+function deleteRow(){
+    $(this).fadeout();
+}

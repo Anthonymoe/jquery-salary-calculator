@@ -7,4 +7,12 @@
     margin-left: 550px;
     margin-top: 10px;
 }
+
+table, th, td {
+    border: 2px solid black;
+    text-align: left;
+}
+
+table {
+    width: 100%;
 }
