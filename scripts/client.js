@@ -46,8 +46,8 @@ function totalCost( array ) {
     //append
     if (monthlyCost > 20000) {
         $('#costOut').css("background-color", "red");
-    }//end greater than 20k    
-    el.append( `<p> Total Monthly: ${monthlyCost} <p>` ) 
+    }//end greater than 20k   
+    el.append( `<p> Total Monthly: ${monthlyCost.toFixed(2)} <p>` ) 
 }//end of totalCost
 
 function displayInfo( info ){
@@ -64,3 +64,4 @@ function displayInfo( info ){
 function deleteRow(){
     $(this).parent().parent().remove();
 }
+
