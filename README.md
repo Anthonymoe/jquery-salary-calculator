@@ -20,4 +20,4 @@ Check List
 
 [X] Calculate total monthly cost and append to DOM 
 
-[ ] Create function if total monthly cost exceeds 20k
+[X] Create function if total monthly cost exceeds 20k

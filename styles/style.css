@@ -1,3 +1,7 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #getInfoButton {
     margin-left: 723px;
     margin-top: 10px;
@@ -9,10 +13,22 @@
 }
 
 table, th, td {
-    border: 2px solid black;
+    border: 1px solid black;
+    border-collapse: collapse;
     text-align: left;
 }
 
 table {
     width: 100%;
+    font-size: 20px;
+}
+
+tr:nth-child(even) {
+    background-color: silver;
+}
+
+#costOut {
+    text-align: right;
+    font-size: 25px;
+    font-weight: bold;
 }
