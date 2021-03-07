@@ -28,7 +28,10 @@ tr:nth-child(even) {
 }
 
 #costOut {
-    text-align: right;
+    position: absolute;
+    right: 10px;
     font-size: 25px;
     font-weight: bold;
+    margin-top: 10px;
+    background-clip: content-box;
 }
